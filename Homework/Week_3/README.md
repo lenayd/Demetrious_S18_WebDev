@@ -1,4 +1,4 @@
-#Week 3 
+# Week 3
 
 In this Folder, you'll find my homework for Week 3. 
 
