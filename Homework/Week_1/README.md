@@ -1,3 +1,5 @@
+#Week 1 
+
 In this Folder, you'll find my homework for Week 1. 
 
 I set up and emailed you my GitHub Repo link, then downloaded all the required software needed for the class. 
