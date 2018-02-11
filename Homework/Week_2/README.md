@@ -8,7 +8,7 @@ clicking on the attachmemt named "Sitemap.jpeg" in this folder.
 
 For the assignment's second bullet point, I read the article about wireframing posted on the class
 GitHub repository and posted a reaction to the reading on my blog. You can access my blog post at
-http://sites.bxmc.poly.edu/~lenaydemetrious/Afs/ 
+http://sites.bxmc.poly.edu/~lenaydemetrious/Afs/index.php/2018/02/04/reaction-to-five-important-considerations-for-wireframing/ 
 
 For the assignment's third bullet point, I created a wireframe for my recipe's page on its
 hypothetical recipe website. I tried my best to mark it up with as many semantic HTML tags
