@@ -1,0 +1,154 @@
+/*Importing the main stylesheet*/
+@import "main.css";
+
+/*Importing a font I found online. I renamed it "Cute-Scribble-Font" for this website page.*/
+@font-face {
+	font-family: "Cute-Scribble-Font";
+	src: url("Lemonade Stand D copy.otf");
+}
+
+div {
+    font-family: "Cute-Scribble-Font";
+}
+
+/* Setting up the page's properties (size and margin)*/
+main {
+	width: 100vw;
+	margin: 0 auto;
+}
+
+/* The article containing the recipe's properties (width, height, padding, how it floats*/
+article {
+	width: 1400px;
+	height: 100vh;
+	float: left;
+	padding-left: 10px;
+}
+
+/* The main side nav/header's properties (color, width, height, float, margin, padding, etc.*/
+aside {
+	position: relative;
+	width: 275px;
+	float:left;
+	height: 140vh;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(255, 255, 255, 100);
+}
+
+/* The footer's properties.*/
+footer {
+	font-family: "Cute-Scribble-Font";
+	font-size: 90%;
+	color: black;
+}
+
+/* Making sure all the elements within the footer display inline next to each other. */
+footer p {
+	display: inline;
+}
+
+/* The recipe page's header. Most of this is just to perfect the positioning of it on the page. Other properties
+include text color and the special font*/
+article h1 {
+	margin-top: 0;
+	margin-left:300px;
+	max-height: 50px;
+	width: 1000px;
+	font-family: "Cute-Scribble-Font";
+	font-size: 500%;
+	color: black;
+	float: left;
+}
+
+/* The recipe description. It's positioned roughly in the center of the page and uses the special font.*/
+article h2 {
+	width: 1000px;
+	margin-left: 340px;
+	font-family: "Cute-Scribble-Font";
+}
+
+/* This is the basic logo I created. It's positioned a bit above the nav and in the center of the aside.*/
+aside img{
+	width: 200px;
+	margin-left: 35px;
+	margin-top: 120px;
+	position: fixed;
+}
+
+/* This is the spring roll drawing image. It's positioned roughly in the center of the page.*/
+article img {
+	margin-top: 0;
+	margin-left: 185px;
+}
+
+/* The left margin of the container containing the two boxes is the reason why the two boxes are positioned in the
+center of the page.*/
+.container_for_boxes {
+	margin-left: 170px;
+}
+
+/* Setting up the properties of the ingredient/direction boxes (width, height, border, margins, how they stack, which
+is inline)*/
+.ingredientanddirectionbox {
+	width: 500px;
+	height: 508px;
+	border: 1px solid white;
+	float: left;
+	margin: 10px;
+	display: inline-block;
+
+}
+
+/* Positioning the headers within the ingredient and direction boxes to be roughly in the center of the box. */
+.ingredientanddirectionbox h2 {
+	margin-left: 200px;
+}
+
+/* Making the indent between the boxes' borders and the lists within the boxes as small as possible without being
+pressed up against the boxes' borders*/
+.ingredientanddirectionbox ul{
+	margin-left: -12px;
+}
+
+.ingredientanddirectionbox ol{
+	margin-left: -20px;
+}
+
+/* The nav within the aside. Mostly positioning but also making the position fixed so as the user scrolls the nav
+follows. */
+ul.verticalnav {
+	list-style-type: none;
+	padding-left: 80px;
+	padding-top: 350px;
+	position: fixed;
+
+}
+
+/* Making the mock social media links within the footer white insdie of blue. */
+footer a {
+	color: white;
+}
+
+/* Playing around with the preferences for each of the elements within the nav. This includes font, text color, 
+getting rid of the default underlines, padding, aligning them to be centered, and setting the transition timer for
+0.5s so when the user hovers over each nav element, it takes 0.5s for it to change color from black to gold. */
+.verticalnav li a{
+	font-family: "Cute-Scribble-Font";
+	font-size: x-large;
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+
+/* When the user hovers over each nav element, it changes in color from black to gold. */
+.verticalnav li a:hover {
+	color: rgb(227, 190, 66);
+
+}
+
+
