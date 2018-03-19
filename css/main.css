@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+}
+
+html, 
+body {
+	margin: 0;
+}
+
+.clearfix::after{
+	display: block;
+	clear: both;
+	/*to ensure cross browser and legacy compatibility */
+	height: 0;
+	font-size: 0;
+	content: '';
+	/*ultra paranoid*/
+	visibility: hidden;
+}
+
+div, 
+header, 
+footer, 
+main, 
+section, 
+aside, 
+article {
+	min-height: 100px;
+	background-color: rgba(0, 100, 255, 0.2);
+}
+
+/*layout 1 specific styles*/
+
+main {
+	width: 900px;
+	margin: 0 auto;
+}
+
+article {
+	width: 600px;
+	float: left;
+}
+
+aside {
+	width: 300px;
+	float:left;
+}

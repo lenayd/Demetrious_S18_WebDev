@@ -1,0 +1,248 @@
+/*Importing the main stylesheet*/
+@import "main.css";
+
+/*Importing one of the fonts*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+
+
+/* The article containing the page's contents' properties (width, height, padding, how it floats) */
+article {
+	width: 100%;
+	height: 100%;
+	float: left;
+	padding-left: 10px;
+}
+
+/* The body's properties */
+body {
+	height: 100%;
+	background-color: #FFC72C;
+}
+
+/* Playing around with the margin of the footer */
+footer {
+	margin-top: 70px;
+}
+
+
+/* Making sure all the elements within the footer display inline next to each other. */
+footer p {
+	display: inline;
+}
+
+
+/* Making the social media links within the footer white instead of blue. */
+footer a {
+	color: white;
+}
+
+/* The following are properties to make everything look pretty (text, positioning, etc.) */
+div a {
+	color: #C91919;
+}
+
+.squarediv h1 {
+	color: #FFC72C;
+	font-size: 70px;
+	font-family: "graffiti";
+	text-align: center;
+}
+
+.secondrowsquarediv h1 {
+	color: #FFC72C;
+	font-size: 35px;
+	font-family: "graffiti";
+	margin-left: 15px;
+	margin-top: 200px;
+}
+
+
+.rectanglediv h1, 
+.secondrowrectanglediv h1 {
+	color: #FFC72C;
+	font-size: 30px;
+	font-family: "graffiti";
+	text-align: center;
+}
+
+/* Resizing the image to fit the container it belongs to */
+div img {
+	width: 300px;
+	height: 300px;
+}
+
+.rectanglediv h4 {
+	font-size: 14px;
+	font-family: "Permanent Marker";
+	font-weight: 100;
+	color: #C91919;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+.secondrowrectanglediv h4 {
+	font-size: 15px;
+	font-family: "Permanent Marker";
+	font-weight: 100;
+	color: #C91919;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+.wrapperdiv {
+	width: 1300px;
+	margin-left: 190px;
+	margin-top: 25px;
+}
+
+.squarediv {
+	width: 300px;
+	height: 300px;
+	background-color: black;
+	margin: 10px;
+	float: left;
+	display: inline-block;
+}
+
+.rectanglediv {
+	width: 600px;
+	height: 300px;
+	background-color: black;
+	margin: 10px;
+	float: left;
+	display: inline-block;
+}
+
+.secondrowsquarediv {
+	width: 300px;
+	height: 300px;
+	background-color: black;
+	margin: 10px;
+	float: left;
+	display: inline-block;
+}
+
+.secondrowrectanglediv {
+	width: 600px;
+	height: 300px;
+	background-color: black;
+	margin: 10px;
+	float: left;
+	display: inline-block;
+}
+
+/* When the user hovers over text, it changes color. If they hover over an image, it goes to grayscale. */
+.squarediv h1:hover{
+	color: #C91919;
+	transition: all 0.4s;
+}
+
+.secondrowsquarediv h1:hover{
+	color: #C91919;
+	transition: all 0.4s;
+}
+
+.secondrowsquarediv h1 a:hover{
+	color: #FFC72C;
+	transition: all 0.4s;
+}
+
+.squarediv img:hover, 
+.secondrowsquarediv img:hover{
+	filter: grayscale(100);
+	transition: all 0.7s;
+}
+
+.rectanglediv h1:hover,
+.secondrowrectanglediv h1:hover{
+	color: #C91919;
+	transition: all 0.4s;
+}
+
+.rectanglediv h4:hover,
+.secondrowrectanglediv h4:hover{
+	color: #FFC72C;
+	transition: all 0.4s;
+}
+/*Mobile*/
+
+@media only screen and (max-width: 500px) {
+
+			body {
+				width: 100%;
+			}
+
+			header {
+				height: 400px;
+			}
+
+			.clearfix {
+				width: 100%;
+			}
+
+			.wrapperdiv {
+				width: 100%;
+				margin-left:0;
+			}
+			
+			.squarediv, 
+			.rectanglediv, 
+			.secondrowsquarediv, 
+			.secondrowrectanglediv {
+				margin-left: 11%;
+			}
+
+            .rectanglediv {
+                width: 300px;
+                height: 600px;
+            }
+
+            .secondrowrectanglediv {
+                width: 300px;
+                height: 600px;
+
+            }
+
+            .rectanglediv h4 {
+            	font-size: 15px;
+            }
+        }
+
+/* Tablet Size */
+		@media only screen and (min-width: 768px) and (max-width: 1024px) {
+			body {
+				width: 100%;
+			}
+
+		
+
+			.wrapperdiv {
+				width: 700px;
+				margin-left: 3%;
+			}
+			
+			.squarediv, 
+			.rectanglediv, 
+			.secondrowsquarediv, 
+			.secondrowrectanglediv {
+				margin-left: 20px;
+				margin-right: 0;
+			}
+
+			.rectanglediv, 
+			.secondrowrectanglediv {
+				width: 620px;
+			}
+
+
+
+			.squarediv img, 
+			.secondrowsquarediv img {
+				padding: 0;
+				width: 300px;
+				height: 300px;
+			}
+           
+		}
+

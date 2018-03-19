@@ -1,0 +1,58 @@
+/*importing the main stylesheet*/
+@import "main.css";
+
+/*importing the fonts*/
+@font-face {
+	font-family: "graffiti";
+	src: url("TheBattleCont.ttf");
+}
+
+/*the main has a background image of an old Queens-bound train*/
+main {
+	background-image: url("home image.png");
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*the text that is layered on top of the image*/
+h1 {
+	z-index: 2;
+	font-family: "graffiti";
+	font-size: 120px;
+	color: #FFC72C;
+	position: relative;
+	bottom: 75%;
+	left: 4%;
+}
+
+/*when a user hovers over the text, it changes color*/
+h1:hover {
+	color:#C91919;
+	transition: all 0.4s;
+}
+
+
+/* Tablet Size */
+		@media only screen and (min-width: 768px) and (max-width: 1024px) {
+			h1 {
+				text-align: center;
+				left: 0;
+			}
+
+		}
+
+/*Mobile*/
+
+@media only screen and (max-width: 500px) {
+			h1 {
+				text-align: center;
+				left: 0;
+				bottom: 95%;
+			}
+           
+        }
+
+
+
+

@@ -1,0 +1,155 @@
+/*Importing the main stylesheet*/
+@import "main.css";
+
+/*Importing one of the fonts */
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+/* Setting the properties of the front part of the card */
+.picdiv {
+	width: 225px;
+	height: 225px;
+	margin-right: 30px;
+	float: left;
+	display: inline-block;
+}
+
+/* Positioning the wrapper so the rest of the elements are positioned properly */
+.wrapperdiv {
+	width: 1500px;
+	margin-left: 150px;
+	height: 5px;
+}
+
+/* Resizing the images to fit the container they belong to */
+.picdiv img{
+	width: 225px;
+	height: 225px;
+}
+
+/* Another wrapper div for the last row (which has less cards than the other two rows) */
+.lastrowwrapper {
+	margin-left: 285px;
+}
+
+/* Properties of the div that contains all the elements of the flipping card */
+.flipdiv {
+	perspective: 1000px;
+	margin-right: 30px;
+	float: left;
+	display: inline-block;
+}
+
+/* When the user hovers over the card, it flips! */
+.flipdiv:hover .flipanimation {
+	transform: rotateY(180deg);
+}
+
+/* Properties of all the flipping card elements (to make it look pretty!) */
+.flipdiv, 
+.picdiv, 
+.descdiv {
+	width: 225px;
+	height: 225px;
+	margin-top: 12px;
+	margin-bottom: 20px;
+	margin-right: 60px;
+}
+
+/* Properties of the actual animation (time, etc.) */
+.flipanimation {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* Properties that make it look like the cards have a front and back (even though they don't) */
+.picdiv, 
+.descdiv {
+	backface-visibility: hidden; 
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Some more rotation stuff (which makes the animation work) */
+.picdiv {
+	z-index: 2; 
+	transform: rotateY(0deg);
+}
+
+.descdiv {
+	transform: rotateY(180deg);
+	background-color: black;
+}
+
+/* Making sure all the elements within the footer display inline next to each other. */
+footer p {
+	display: inline;
+}
+
+/* Making the social media links within the footer white instead of blue. */
+footer a {
+	color: white;
+}
+
+/* My nav was doing something weird on this page for some reason, and this was the only fix */
+.clearfix ul {
+	height: 50px;
+}
+
+/* Text properties of all the backsides of the flipping cards */
+.descdiv h1 {
+	font-family: "Permanent Marker";
+	color: white;
+	font-weight: 100; 
+	margin-top: 0;
+	margin-left: 5px;
+	margin-right: 9px;
+	margin-bottom: 0;
+	font-size: 19px;
+}
+
+.descdiv h2 {
+	font-family: "Permanent Marker";
+	color: white;
+	font-weight: 100; 
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 0;
+	margin-right: 5px;
+	font-size: 15px;
+}
+
+.descdiv h3 {
+	font-family: "Permanent Marker";
+	color: white;
+	font-weight: 100;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 0;
+	margin-right: 5px;
+	font-size: 15px;
+}
+
+.descdiv h4 {
+	font-family: "Permanent Marker";
+	color: white;
+	font-weight: 100;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 0;
+	margin-right: 5px;
+	font-size: 15px;
+}
+
+.descdiv h5 {
+	font-family: "Permanent Marker";
+	color: white;
+	font-weight: 100;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 0;
+	margin-right: 5px;
+	font-size: 15px;
+}
+
