@@ -1,0 +1,73 @@
+<!-- Setting up the doc type -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- The title of my page -->
+	<title> Tarantino Still Generator </title>
+</head>
+<body>
+<!-- Beginning to write the javascript stuff! -->
+<script type="text/javascript">
+		// Setting up each pic and caption pair (two element arrays that will later go into a parent array). Each Tarantino film has two pic/caption pair
+		var ReservoirDogs1 = ['https://filmgrab.files.wordpress.com/2012/10/2611.jpg', 'Steve Buscemi and Harvey Keitel in <em>Reservoir Dogs</em>']
+		
+		var ReservoirDogs2 = ['https://filmgrab.files.wordpress.com/2012/10/2911.jpg?w=999&h=&zoom=2', 'Michael Madsen in <em>Reservoir Dogs</em>']
+		
+		var PulpFiction1 = ['https://filmgrab.files.wordpress.com/2011/02/263.png', 'Uma Thurman and John Travolta in <em>Pulp Fiction</em>']
+
+		var PulpFiction2 = ['https://img.buzzfeed.com/buzzfeed-static/static/2016-01/11/9/enhanced/webdr13/original-16899-1452523305-3.jpg?downsize=715:*&output-format=auto&output-quality=auto', 'John Travolta and Samuel L. Jackson in <em>Pulp Fiction</em>']
+
+		var JackieBrown1 = ['https://journeysindarknessandlight.files.wordpress.com/2015/03/jackie-brown.jpg', 'Pam Grier in <em>Jackie Brown</em>']
+		
+		var JackieBrown2 = ['http://www.bfi.org.uk/sites/bfi.org.uk/files/styles/full/public/image/jackie-brown-1997-003-robert-de-niro-samuel-l-jackson-sofa-00m-ric.jpg?itok=3jQ3k4jY', 'Robert De Niro and Samuel L. Jackson in <em>Jackie Brown</em>']
+		
+		var KillBill1 = ['https://shdmu.files.wordpress.com/2014/12/1342442204_kill_bill_3-oo.jpg', 'Uma Thurman in <em>Kill Bill, Vol. 1</em>']
+		
+		var KillBill2 = ['https://filmgrab.files.wordpress.com/2012/10/0135.jpg?w=1024&h=&zoom=2', 'Uma Thurman in <em>Kill Bill, Vol. 2</em>']
+		
+		var DeathProof1 = ['https://filmgrab.files.wordpress.com/2012/10/2015.jpg?w=1024&h=&zoom=2', 'Vanessa Ferlito in <em>Death Proof</em>']
+		
+		var DeathProof2 = ['https://78.media.tumblr.com/4a07d2a57e47e08515c58fdc52e9f4d7/tumblr_n87b6fO1jJ1qi9valo2_1280.png', 'Mary Elizabeth Winstead in <em>Death Proof</em>']
+		
+		var IngloriousBasterds1 = ['https://1047hit.com/wp/wp-content/uploads/2016/07/landa_radiohit.jpg', 'Christoph Waltz in <em>Inglorious Basterds</em>']
+		
+		var IngloriousBasterds2 = ['https://vignette.wikia.nocookie.net/inglouriousbasterds/images/0/07/Shosanna_loads_her_gun.jpg/revision/latest?cb=20121225190223', 'Melanie Laurent in <em>Inglorious Basterds</em>']
+		
+		var Django1 = ['http://cdn.collider.com/wp-content/uploads/django-unchained-movie-image-jamie-foxx-1.jpg', 'Jamie Foxx and Christoph Waltz in <em>Django: Unchained</em>']
+		
+		var Django2 = ['https://wallup.net/wp-content/uploads/2016/08/08/111784-Leonardo_DiCaprio-film_stills-Dublin_Churchwarden-pipes-Django_Unchained.jpg', 'Leonardo DiCaprio in <em>Django: Unchained</em>']
+		
+		var HatefulEight1 = ['https://pics.filmaffinity.com/The_Hateful_Eight-665363117-large.jpg', 'Samuel L. Jackson in <em>The Hateful Eight</em>']
+		
+		var HatefulEight2 = ['http://cinemavine.com/wp-content/uploads/2015/08/hateful-eight-tarantino-trailer-screencaps-44.png', 'Tim Roth in <em>The Hateful Eight</em>']
+
+		// Each pic/caption pair now goes into a larger, parent array called StillArray
+		var StillArray = [ReservoirDogs1, ReservoirDogs2, PulpFiction1, PulpFiction2, JackieBrown1, JackieBrown2, KillBill1, KillBill2, DeathProof1, DeathProof2, IngloriousBasterds1, IngloriousBasterds2, Django1, Django2, HatefulEight1, HatefulEight2];  
+
+		// When the user clicks on the button, the code executes this function, which generates a random number between 0-15. It then sends this number to the GetPicURL function
+		function ClickRand() { 
+			var num = (Math.floor(Math.random() * 16));
+			GetPicURL(num);    
+		}
+
+		// After the ClickRand function, the code executes this function, which retrieves the picture url (picurl) and caption (piccaption) by using the random generated number (the random generated number becomes the array index number) and then displays both
+		function GetPicURL(num) {
+			var picurl = StillArray[num][0]; 
+			var piccaption = StillArray[num][1];  
+			document.getElementById("RandImg").src = picurl; 
+			document.getElementById("RandText").innerHTML = piccaption; 
+		}
+
+
+</script>
+<!-- "When the user clicks, go to the ClickRand function" -->
+<button onclick = "ClickRand()">Click Me For a Still!</button>
+<!-- A container that will contain both the image and caption -->
+<div>
+	<!-- The default pic/caption pair that displays is the ReservoirDogs1 pair -->
+	<img id= "RandImg" src= "https://filmgrab.files.wordpress.com/2012/10/2611.jpg">
+	<h1 id="RandText">Steve Buscemi and Harvey Keitel in <em>Reservoir Dogs</em></h1>
+</div>
+
+</body>
+</html>
