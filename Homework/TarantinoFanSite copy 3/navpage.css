@@ -1,0 +1,497 @@
+/* Importing the font for this page */
+@font-face {
+  font-family: "titlefont";
+  src: url("Cairo.ttf");
+}
+
+/* The body takes up the whole viewport height and is a yellow color. */
+body {
+  background-color: #F1BC45;
+  height: 100vh;
+}
+
+/* All the images (splatters) are 500x500 */
+img {
+    height: 500px;
+    width: 500px;
+}
+
+/* The Quotes link. Setting up style properties (font, size, decoration, color, etc.) and positioning (z-index, position relative, etc.)*/
+#quotes {
+  text-decoration: none;
+  color: black;
+  font-family: "titlefont";
+  font-weight: lighter;
+  font-size: 50px;
+  max-width: 200px;
+  margin: 0;
+  display: inline;
+  z-index: 1;
+  position: relative;
+  bottom: 55%;
+  left: 31%; 
+  transition: 0.2s;
+}
+
+/* When the user hovers over any one of the links, it transitions to the same yellow color as the body. */
+#quotes:hover, 
+#stills:hover, 
+#films:hover {
+  color: #F1BC45;
+}
+
+/* The Stills link. Setting up style properties (font, size, decoration, color, etc.) and positioning (z-index, position relative, etc.)*/
+#stills {
+  text-decoration: none;
+  color: black;
+  font-family: "titlefont";
+  font-weight: lighter;
+  font-size: 50px;
+  max-width: 200px;
+  margin: 0;
+  display: inline;
+  z-index: 1;
+  position: relative;
+  bottom: 55%;
+  left: 34%; 
+  transition: 0.2s;
+}
+
+/* The Films link. Setting up style properties (font, size, decoration, color, etc.) and positioning (z-index, position relative, etc.)*/
+#films {
+  text-decoration: none;
+  color: black;
+  font-family: "titlefont";
+  font-weight: lighter;
+  font-size: 50px;
+  max-width: 200px;
+  margin: 0;
+  display: inline;
+  z-index: 1;
+  position: relative;
+  bottom: 55%;
+  left: 35%; 
+  transition: 0.2s;
+}
+
+/* Every div containing the splatter/link pair is 500x500 and displays inline-block. */
+div {
+  height: 500px; 
+  width: 500px;
+  display: inline-block;
+}
+
+/* The div containing the quote splatter/link pair's positioning. The other two divs (for stills and films) will follow. */
+.quotediv {
+  margin-top: 10%;
+  margin-left: 4%;
+}
+
+/* Setting up all the animation stuff for the Quotes splatter/link pair. It zooms in for 0.2 seconds and there is a delay of 0.1 second. */
+#quotesplat {
+  position: relative;
+  left: 0.2%;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; 
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s; 
+}
+
+/* Setting up all the animation stuff for the Films splatter/link pair. It zooms in for 0.2 seconds and there is a delay of 0.5 seconds. */
+#filmsplat {
+  position: relative;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; 
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; 
+}
+
+/* Setting up all the animation stuff for the Stills splatter/link pair. It zooms in for 0.2 seconds and there is a delay of 0.9 seconds. */
+#stillsplat {
+  position: relative;
+  left: 0.5%;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; 
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s; 
+}
+
+/* All this stuff is to make the splatter animation work. */
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+}
+
+
+
+ /* Media Queries! */
+@media only screen and (min-width: 1280px) and (max-width: 1590px) {
+
+    img {
+    height: 400px;
+    width: 400px;
+}
+
+div {
+  height: 400px; 
+  width: 400px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 40px;
+}
+
+#stills {
+  font-size: 40px;
+}
+
+#films {
+  font-size: 40px;
+}
+
+.quotediv {
+  margin-top: 15%;
+}
+
+}
+@media only screen  and (min-width: 1125px) and (max-width: 1279px) {
+
+  img {
+    height: 350px;
+    width: 350px;
+}
+
+div {
+  height: 350px; 
+  width: 350px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 35px;
+}
+
+#stills {
+  font-size: 35px;
+}
+
+#films {
+  font-size: 35px;
+}
+
+.quotediv {
+  margin-top: 20%;
+}
+
+}
+
+@media only screen  and (min-width: 200px) and (max-width: 1124px) {
+
+  img {
+    height: 500px;
+    width: 500px;
+}
+
+div {
+  height: 500px; 
+  width: 500px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 50px;
+}
+
+#stills {
+  font-size: 50px;
+}
+
+#films {
+  font-size: 50px;
+}
+
+.quotediv {
+  margin-top: 0;
+}
+
+.filmdiv {
+  margin-left: 30%;
+  margin-top: -140px;
+}
+
+}
+
+@media only screen  and (min-width: 963px) and (max-width: 1066px) {
+
+  img {
+    height: 450px;
+    width: 450px;
+}
+
+div {
+  height: 450px; 
+  width: 450px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 45px;
+}
+
+#stills {
+  font-size: 45px;
+}
+
+#films {
+  font-size: 45px;
+}
+
+.quotediv {
+  margin-top: 0;
+}
+
+.filmdiv {
+  margin-left: 30%;
+  margin-top: -140px;
+}
+
+}
+
+@media only screen  and (min-width: 859px) and (max-width: 962px) {
+
+  img {
+    height: 400px;
+    width: 400px;
+}
+
+div {
+  height: 400px; 
+  width: 400px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 40px;
+}
+
+#stills {
+  font-size: 40px;
+}
+
+#films {
+  font-size: 40px;
+}
+
+.quotediv {
+  margin-top: 5%;
+}
+
+.filmdiv {
+  margin-left: 30%;
+  margin-top: -140px;
+}
+
+}
+
+@media only screen  and (min-width: 758px) and (max-width: 858px) {
+
+  img {
+    height: 350px;
+    width: 350px;
+}
+
+div {
+  height: 350px; 
+  width: 350px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 35px;
+}
+
+#stills {
+  font-size: 35px;
+}
+
+#films {
+  font-size: 35px;
+}
+
+.quotediv {
+  margin-top: 10%;
+}
+
+.filmdiv {
+  margin-left: 30%;
+  margin-top: -140px;
+}
+
+}
+
+@media only screen  and (min-width: 650px) and (max-width: 757px) {
+
+  img {
+    height: 300px;
+    width: 300px;
+}
+
+div {
+  height: 300px; 
+  width: 300px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 30px;
+}
+
+#stills {
+  font-size: 30px;
+}
+
+#films {
+  font-size: 30px;
+}
+
+.quotediv {
+  margin-top: 20%;
+}
+
+.filmdiv {
+  margin-left: 30%;
+  margin-top: -140px;
+}
+
+}
+
+@media only screen  and (min-width: 485px) and (max-width: 649px) {
+
+  img {
+    height: 500px;
+    width: 500px;
+}
+
+div {
+  height: 500px; 
+  width: 500px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 50px;
+}
+
+#stills {
+  font-size: 50px;
+}
+
+#films {
+  font-size: 50px;
+}
+
+.stilldiv {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.quotediv {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.filmdiv {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+}
+
+@media only screen  and (min-width: 200px) and (max-width: 484px) {
+
+  img {
+    height: 450px;
+    width: 450px;
+}
+
+div {
+  height: 450px; 
+  width: 450px;
+  display: inline-block;
+}
+
+#quotes {
+  font-size: 45px;
+}
+
+#stills {
+  font-size: 45px;
+}
+
+#films {
+  font-size: 45px;
+}
+
+.quotediv {
+  margin-top: 5%;
+  margin-left: -30px;
+}
+
+.filmdiv {
+  margin-top: 5%;
+  margin-left: -30px;
+}
+
+.stilldiv {
+  margin-top: 5%;
+  margin-left: -30px;
+}
+
+}
+

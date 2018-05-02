@@ -1,0 +1,101 @@
+<!-- Setting up the doc type, etc. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Setting up the encoding -->
+    <meta charset="utf-8">
+    <!-- This title will be displayed in the browser tab -->
+    <title>I LOVE QT</title>
+    <!-- The description that will be displayed if someone uses a search engine to find my film -->
+    <meta name="description" content="A fan website for one of the world's most exciting filmmakers, Quentin Tarantino">
+    <!-- Some keywords that will make the webpage pop up in a search -->
+    <meta name="keywords" content="Film, Cinema, Movies, Actors, Celebrities, Characters, Quentin Tarantino, Pulp Fiction, Kill Bill">
+    <!-- Who developed the page (me!) -->
+    <meta name="author" content="Lenay Demetrious">
+    <!-- Loading in the stylesheet I created for this Quotes page -->
+    <link rel="stylesheet" href="quotes.css" type="text/css">
+</head>
+<body>
+<!-- Embedding the music in. It's a song from Jackie Brown. It starts automatically, loops, and the audio player is hidden. -->
+<embed src="jackiebrown.mp3" autostart="true" loop="true" hidden="true">
+<!-- Beginning to write the javascript stuff! -->
+<script type="text/javascript">
+    // Setting up all the variables for the quotes.
+    var Quote1 = "\"When people ask me if I went to film school I tell them, 'no, I went to films.'\"";
+    var Quote2 = "\"Violence is one of the most fun things to watch.\""; 
+    var Quote3 = "\"A writer should have this little voice inside of you saying, Tell the truth. Reveal a few secrets here.\""; 
+    var Quote4 = "\"I was kind of excited about going to jail the first time and I learned some great dialogue.\"";
+    var Quote5 = "\"Movies are not about the weekend that they're released, and in the grand scheme of things, that's probably the most unimportant time of a film's life.\"";
+    var Quote6 = "\"I like it when somebody tells me a story, and I actually really feel that that's becoming like a lost art in American cinema.\"";
+    var Quote7 = "\"I've always thought my soundtracks do pretty good, because they're basically professional equivalents of a mix tape I'd make for you at home.\"";
+    var Quote8 = "\"Something stopped me in school a little bit. Anything that I'm not interested in, I can't even feign interest.\"";
+    var Quote9 = "\"I always do an all-night horror marathon on Saturdays where we start at seven and go until five in the morning.\"";
+    var Quote10 = "\"I loved history because to me, history was like watching a movie.\"";
+    // An array containing all the quotes. 
+    var QuoteArray = [Quote1, Quote2, Quote3, Quote4, Quote5, Quote6, Quote7, Quote8, Quote9, Quote10];
+    // Setting up all the variables for the images.
+    var Pic1 = "https://consequenceofsound.files.wordpress.com/2015/08/screen-shot-2015-08-24-at-9-35-24-am.png?w=807";
+    var Pic2 = "http://iris.theaureview.com/wp-content/uploads/2016/02/quentin-tarantino-672x372.jpg"; 
+    var Pic3 = "https://www.quentintarantinofanclub.com/upload/img/09201722195344-book-quentin-tarantino-a-retrospective.jpg"; 
+    var Pic4 = "https://media.vanityfair.com/photos/578511f63d5bd24b0c64e07b/master/pass/quentin-tarantino-hateful-eight.jpg.";
+    var Pic5 = "https://cdn1.thr.com/sites/default/files/2017/11/quentin_tarantino_.jpg";
+    var Pic6 = "https://media.gq.com/photos/56661347a51db24a5b4bc23d/3:2/w_880/quentin-tarantino-gq-1215-01-wide.jpg";
+    var Pic7 = "https://www.sbs.com.au/guide/sites/sbs.com.au.guide/files/styles/full/public/vice_guide_to_film-tarantino.jpg?itok=sT73pygq";
+    var Pic8 = "http://www.bogglingfacts.com/wp-content/uploads/2016/02/Quentin-Tarantino.jpg.";
+    var Pic9 = "https://pmcvariety.files.wordpress.com/2015/12/quentin-tarantino.jpg?w=1000&h=562&crop=1";
+    var Pic10 = "https://i2.wp.com/heightline.com/wp-content/uploads/Quentin-Tarantino-e1518107324944.jpg?resize=1021%2C580&ssl=1"; 
+    // An array containing all the images.  
+    var PicArray = [Pic1, Pic2, Pic3, Pic4, Pic5, Pic6, Pic7, Pic8, Pic9, Pic10];
+    // These two variables are used for a function you'll see in a bit. 
+    var counter = -1; 
+    var numarray = []; 
+
+
+// After the ClickRand function, the code executes this function, which retrieves the quote (quote) and picture (pic) by using the random generated number (the random generated number becomes the array index number) and then displays both.
+        function GetQuoteAndPic(num) {
+            var quote = QuoteArray[num]; 
+            var pic = PicArray[num];  
+            document.getElementById("RandImg").src = pic; 
+            document.getElementById("RandText").innerHTML = quote; 
+        }
+    // When the user clicks on the button, the code executes this function, which generates a random number between 0-9. It then sends this number to the GetPicURL function
+        function ClickRand() {   
+            counter += 1; 
+            numarray.push(num); 
+            var num = (Math.floor(Math.random() * 10));
+            // If the same pic/quote pair is generated consecutively, generate another random number. 
+            if (numarray[counter] == numarray[counter-1]){
+                (Math.floor(Math.random() * 10));
+                GetQuoteAndPic(num); 
+            }
+            // If the pic/quote pair doesn't match the pic/quote pair that was generated right before it, it's good. 
+            else {
+                GetQuoteAndPic(num);  
+            }  
+        }
+</script>
+    <!-- The header, which contains the "Back to Menu" link and the header of the page ("QUOTES") -->
+    <div class="header">
+    <!-- The "Back to Menu" link -->
+    <a href="navpage.html">BACK TO MENU</a>
+    <!-- The page's header ("QUOTES") -->
+    <h1>QUOTES</h1>
+    </div>
+<!-- A container that contains the image, quote box (with quote), and button -->
+<div class= "container">
+    <!-- The default picture -->
+    <img id= "RandImg" src= "https://consequenceofsound.files.wordpress.com/2015/08/screen-shot-2015-08-24-at-9-35-24-am.png?w=807">
+    <!-- The div containing the quote (quote box) -->
+    <div class= "quotebox">
+        <!-- The default quote -->
+        <p id="RandText">"When people ask me if I went to film school I tell them, 'no, I went to films.'"</p>
+    </div>
+    <!-- "When the user clicks, go to the ClickRand function" -->
+    <button onclick = "ClickRand()">Click Me For a Quote!</button>
+</div>
+</body>
+</html>
+
+
+
+
